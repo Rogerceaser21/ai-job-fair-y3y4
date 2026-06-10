@@ -167,8 +167,6 @@ body{
   box-shadow:var(--bevel), 0 10px 26px rgba(0,0,0,.35);
 }
 .two-col{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(1rem,2.4vw,2.2rem); align-items:center; }
-.img-stack{ display:flex; flex-direction:column; gap:clamp(.5rem,1.4vh,1rem); align-items:center; }
-.img-stack .slide-img{ width:auto; max-width:100%; max-height:min(30vh,232px); }
 
 /* numbered step chips */
 .steps{ display:flex; flex-direction:column; gap:var(--gap-sm); }
@@ -191,7 +189,6 @@ body{
 /* big task line */
 .task-big{ font-family:var(--font-display); font-size:clamp(1rem,2.5vw,1.8rem); line-height:1.6; color:var(--ink); }
 .task-big .chip{ color:var(--redstone); }
-.step .chip{ color:var(--redstone); font-weight:700; }
 
 /* teacher-only callout (styled like an in-game sign) */
 .callout{
@@ -369,11 +366,13 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
   <!-- ===== SLIDE 2 — WALT ===== -->
   <section class="slide" data-slide="2" aria-label="WALT"
     data-notes="<strong>WALT (1 min).</strong> Read each one aloud. The <em>bold italic blue</em> words are our thinking words. <span class='tag cfu'>CFU</span> Cold call: 'What does it mean to <em>identify</em> something?' (to spot it and say what it is).">
-    <div class="slide-inner" style="justify-content:center;">
+    <div class="slide-inner">
       <span class="eyebrow reveal d1">WALT · We Are Learning To</span>
-      <div class="mc-panel reveal d2" style="margin-top:var(--gap); max-width:min(90%,820px);">
-        <p style="font-family:var(--font-display); font-size:var(--h3-size); line-height:1.45; color:var(--ink); margin:0;"><span class="verb">Identify</span> different jobs in our city that use <span class="hl">A.I.</span> to help people.</p>
-      </div>
+      <ul class="bullet-list reveal d2" style="margin-top:var(--gap-sm);">
+        <li><span class="verb">Identify</span> different jobs in our city that use A.I. to help people.</li>
+        <li class="b-gold"><span class="verb">Describe</span> what an A.I. "Bot" does at each station, in our own words.</li>
+        <li class="b-red"><span class="verb">Use</span> the in-game camera to take and <span class="verb">label</span> photos of A.I. at work.</li>
+      </ul>
     </div>
   </section>
 
@@ -388,23 +387,8 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
     </div>
   </section>
 
-  <!-- ===== SLIDE 4 — EXPLORE WITH MR IGOR (intro) ===== -->
-  <section class="slide" data-slide="4" aria-label="Explore with Mr Igor"
-    data-notes="<strong>Follow along (1 min).</strong> Set the scene: we explore the A.I. Job Fair city together. I drive on the projector; students watch and call out what they spot. Wave hello to Aiden, Isabel and the Teleport Bot. <span class='tag cfu'>CFU</span> 'Who can you see on the screen?'">
-    <div class="slide-inner">
-      <span class="eyebrow reveal d1">Follow Along</span>
-      <div class="two-col" style="margin-top:var(--gap);">
-        <div class="reveal d2">
-          <h2 class="slide-title">Let's <span class="hl2">explore</span> together!</h2>
-          <p class="body-text" style="margin-top:var(--gap);">Follow along with <strong>Mr Igor</strong>. We'll visit the city and see how A.I. helps people. Say hi to <span class="hl">Aiden</span>, <span class="hl">Isabel</span>, and the <span class="hl">Teleport Bot</span> along the way!</p>
-        </div>
-        <img class="slide-img reveal d3" src="assets/01-aiden-intro.png" alt="Aiden welcomes you to explore the city">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SLIDE 5 — THE MISSION (AIDEN) — HIDDEN ===== -->
-  <section class="slide" data-slide="5" data-hidden="true" aria-label="The mission"
+  <!-- ===== SLIDE 4 — THE MISSION (AIDEN) ===== -->
+  <section class="slide" data-slide="4" aria-label="The mission"
     data-notes="<strong>Hook (2 min).</strong> Meet Aiden. He sends us to a Teleport Bot, off to the City to meet Isabel. <span class='tag cfu'>CFU</span> Cold call: 'Where do YOU think you might find A.I. helping in a real city? Name one place.' Wait 5–7 sec, take 2–3 voices.">
     <div class="slide-inner">
       <span class="eyebrow reveal d1">The Mission</span>
@@ -419,8 +403,8 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
     </div>
   </section>
 
-  <!-- ===== SLIDE 6 — MEET ISABEL — HIDDEN ===== -->
-  <section class="slide" data-slide="6" data-hidden="true" aria-label="Meet Isabel"
+  <!-- ===== SLIDE 5 — MEET ISABEL ===== -->
+  <section class="slide" data-slide="5" aria-label="Meet Isabel"
     data-notes="<strong>Story (1 min).</strong> Isabel is the host. She names the four experts to visit. Read the names + places aloud so students know their checklist.">
     <div class="slide-inner">
       <span class="eyebrow reveal d1">Meet Isabel · Your Guide</span>
@@ -439,8 +423,8 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
     </div>
   </section>
 
-  <!-- ===== SLIDE 7 — THE CITY / STATIONS — HIDDEN ===== -->
-  <section class="slide" data-slide="7" data-hidden="true" aria-label="The city stations"
+  <!-- ===== SLIDE 6 — THE CITY / STATIONS ===== -->
+  <section class="slide" data-slide="6" aria-label="The city stations"
     data-notes="<strong>Orientation (1 min).</strong> The Teleport Bot can take you anywhere. Five places have A.I. to discover. <span class='tag tt'>Building Ratio</span> 'Turn and tell your partner which station you want to visit first.'">
     <div class="slide-inner">
       <span class="eyebrow reveal d1">The City · 5 A.I. Stations</span>
@@ -460,8 +444,8 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
     </div>
   </section>
 
-  <!-- ===== SLIDE 8 — HOW TO PLAY: TELEPORT — HIDDEN ===== -->
-  <section class="slide" data-slide="8" data-hidden="true" aria-label="How to play: teleport"
+  <!-- ===== SLIDE 7 — HOW TO PLAY: TELEPORT ===== -->
+  <section class="slide" data-slide="7" aria-label="How to play: teleport"
     data-notes="<strong>I Do — step 1 (1 min).</strong> Model on the projector: walk to a Teleport Bot, open it, press a destination button.">
     <div class="slide-inner">
       <span class="ped-badge i-do reveal d1">I Do · Step 1</span>
@@ -475,24 +459,37 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
     </div>
   </section>
 
-  <!-- ===== SLIDE 9 — I DO: AT EACH STATION (4 STEPS, combined) ===== -->
-  <section class="slide" data-slide="9" aria-label="How to play: at each station"
-    data-notes="<strong>I Do (2.5 min).</strong> Model the Hospital: talk to Raj, read the board, find the Hospital Bot ('I make sure people get the right medication!'). Then take a photo and NAME it in the Portfolio by what the A.I. does. <span class='tag cfu'>CFU</span> Cold call: 'What should I call this photo so anyone knows what it shows?' Model: 'Medication Dispensing Bot'.">
+  <!-- ===== SLIDE 8 — HOW TO PLAY: AT EACH STATION ===== -->
+  <section class="slide" data-slide="8" aria-label="How to play: at each station"
+    data-notes="<strong>I Do — step 2 (1.5 min).</strong> Model the Hospital: talk to Raj, read the board, find the Hospital Bot ('I make sure people get the right medication!'). Three things at EVERY station.">
     <div class="slide-inner">
-      <span class="ped-badge i-do reveal d1">I Do</span>
+      <span class="ped-badge i-do reveal d1">I Do · Step 2</span>
       <div class="two-col">
         <div class="reveal d2">
-          <h2 class="slide-title">At every station, do <span class="hl">4 things</span>:</h2>
+          <h2 class="slide-title">At every station, do <span class="hl">3 things</span>:</h2>
           <div class="steps" style="margin-top:var(--gap-sm);">
             <div class="step"><span class="num">1</span><span><strong>Talk</strong> to the person (like Raj).</span></div>
             <div class="step"><span class="num">2</span><span><strong>Read</strong> the board on the wall.</span></div>
             <div class="step"><span class="num">3</span><span><strong>Find</strong> the Bot and see its job.</span></div>
-            <div class="step"><span class="num">4</span><span><strong>Snap &amp; name</strong> a photo: "<span class="chip">Medication Dispensing Bot</span>" ✔</span></div>
           </div>
         </div>
-        <div class="img-stack reveal d3">
-          <img class="slide-img" src="assets/09-hospital-bot-scene.png" alt="The Hospital Bot standing in the hospital">
-          <img class="slide-img" src="assets/18-portfolio-empty.png" alt="The Portfolio book where photos are saved">
+        <img class="slide-img reveal d3" src="assets/09-hospital-bot-scene.png" alt="The Hospital Bot standing in the hospital">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 9 — I DO: SNAP & NAME ===== -->
+  <section class="slide" data-slide="9" aria-label="Snap and name"
+    data-notes="<strong>I Do — step 3 (1.5 min).</strong> Take a photo with the camera, open the Portfolio book, and NAME the photo by what the A.I. does. <span class='tag cfu'>CFU</span> Cold call: 'What should I call this photo so anyone knows what it shows?' Model: 'Medication Dispensing Bot'.">
+    <div class="slide-inner">
+      <span class="ped-badge i-do reveal d1">I Do · Step 3</span>
+      <div class="two-col">
+        <img class="slide-img reveal d2" src="assets/18-portfolio-empty.png" alt="The Portfolio book where photos are saved">
+        <div class="reveal d3">
+          <h2 class="slide-title"><span class="hl2">Snap</span> it. Then <span class="hl">name</span> it.</h2>
+          <p class="body-text" style="margin-top:var(--gap-sm);">Use the camera, then open your Portfolio. Give each photo a clear name that says what the A.I. does.</p>
+          <p class="task-big" style="margin-top:var(--gap);">"<span class="chip">Medication Dispensing Bot</span>" ✔</p>
+          <div class="callout" data-teacher-only="true" style="margin-top:var(--gap-sm);"><span class="tch">🎓</span><span><strong>CFU:</strong> "What should I call this photo so anyone knows what it shows?" Take one answer, then model naming it.</span></div>
         </div>
       </div>
     </div>
