@@ -167,8 +167,8 @@ body{
   box-shadow:var(--bevel), 0 10px 26px rgba(0,0,0,.35);
 }
 .two-col{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(1rem,2.4vw,2.2rem); align-items:center; }
-.img-stack{ display:flex; flex-direction:column; gap:clamp(.5rem,1.4vh,1rem); }
-.img-stack .slide-img{ max-height:min(28vh,220px); }
+.img-stack{ display:flex; flex-direction:column; gap:clamp(.5rem,1.4vh,1rem); align-items:center; }
+.img-stack .slide-img{ width:auto; max-width:100%; max-height:min(30vh,232px); }
 
 /* numbered step chips */
 .steps{ display:flex; flex-direction:column; gap:var(--gap-sm); }
@@ -369,11 +369,11 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
   <!-- ===== SLIDE 2 — WALT ===== -->
   <section class="slide" data-slide="2" aria-label="WALT"
     data-notes="<strong>WALT (1 min).</strong> Read each one aloud. The <em>bold italic blue</em> words are our thinking words. <span class='tag cfu'>CFU</span> Cold call: 'What does it mean to <em>identify</em> something?' (to spot it and say what it is).">
-    <div class="slide-inner">
+    <div class="slide-inner" style="justify-content:center;">
       <span class="eyebrow reveal d1">WALT · We Are Learning To</span>
-      <ul class="bullet-list reveal d2" style="margin-top:var(--gap-sm);">
-        <li><span class="verb">Identify</span> different jobs in our city that use A.I. to help people.</li>
-      </ul>
+      <div class="mc-panel reveal d2" style="margin-top:var(--gap); max-width:min(90%,820px);">
+        <p style="font-family:var(--font-display); font-size:var(--h3-size); line-height:1.45; color:var(--ink); margin:0;"><span class="verb">Identify</span> different jobs in our city that use <span class="hl">A.I.</span> to help people.</p>
+      </div>
     </div>
   </section>
 
@@ -391,10 +391,15 @@ body.scaled-up .two-col .slide-img, body.scaled-up .station-grid{ }
   <!-- ===== SLIDE 4 — EXPLORE WITH MR IGOR (intro) ===== -->
   <section class="slide" data-slide="4" aria-label="Explore with Mr Igor"
     data-notes="<strong>Follow along (1 min).</strong> Set the scene: we explore the A.I. Job Fair city together. I drive on the projector; students watch and call out what they spot. Wave hello to Aiden, Isabel and the Teleport Bot. <span class='tag cfu'>CFU</span> 'Who can you see on the screen?'">
-    <div class="slide-inner" style="text-align:center; align-items:center;">
+    <div class="slide-inner">
       <span class="eyebrow reveal d1">Follow Along</span>
-      <h2 class="slide-title reveal d2" style="margin-top:var(--gap-sm);">Let's <span class="hl2">explore</span> together!</h2>
-      <p class="body-text reveal d3" style="margin-top:var(--gap); max-width:46ch;">Follow along with <strong>Mr Igor</strong>. We'll visit the city and see how A.I. helps people. Say hi to <span class="hl">Aiden</span>, <span class="hl">Isabel</span>, and the <span class="hl">Teleport Bot</span> along the way!</p>
+      <div class="two-col" style="margin-top:var(--gap);">
+        <div class="reveal d2">
+          <h2 class="slide-title">Let's <span class="hl2">explore</span> together!</h2>
+          <p class="body-text" style="margin-top:var(--gap);">Follow along with <strong>Mr Igor</strong>. We'll visit the city and see how A.I. helps people. Say hi to <span class="hl">Aiden</span>, <span class="hl">Isabel</span>, and the <span class="hl">Teleport Bot</span> along the way!</p>
+        </div>
+        <img class="slide-img reveal d3" src="assets/01-aiden-intro.png" alt="Aiden welcomes you to explore the city">
+      </div>
     </div>
   </section>
 
